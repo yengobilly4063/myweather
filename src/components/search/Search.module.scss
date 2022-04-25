@@ -1,0 +1,39 @@
+$color-main: blue;
+$color-sec: #924da3;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    min-width: 30rem;
+    width: fit-content;
+    padding: 1rem 1rem;
+    border: 2px solid rgba($color: $color-main, $alpha: 0.1);
+    border-radius: 2rem;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+      border: 2px solid rgba($color: $color-sec, $alpha: 0.5);
+    }
+    &::placeholder {
+      color: $color-sec;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+  .mobile {
+    min-width: 90%;
+  }
+  .error {
+    padding: 0.5rem 0;
+    width: 50%;
+    text-align: center;
+    background-color: rgba($color: red, $alpha: 0.5);
+    transition: all ease-in-out 500ms;
+    border-radius: 0.2rem;
+    color: white;
+  }
+}

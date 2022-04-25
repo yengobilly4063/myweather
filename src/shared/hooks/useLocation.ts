@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react";
-import { getCityFromLocalStorage, getLocation } from "../helpers/getCity";
+import { useLocationContext } from "../../context/locationContext";
 
 const useLocation = () => {
-  const [city, _] = useState<string>(getCityFromLocalStorage());
-
-  useEffect(() => {
-    if (!city) {
-      getLocation();
-    }
-  });
-
-  return { city };
+  const { city, weather, setCity, setWeather } = useLocationContext();
+  return { city, weather, setCity, setWeather };
 };
 
 export default useLocation;
