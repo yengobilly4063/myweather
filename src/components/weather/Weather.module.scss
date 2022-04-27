@@ -1,7 +1,67 @@
 .wrapper {
+  max-width: 40rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  gap: 5rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  .daily {
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .date {
+    text-align: right;
+    font-weight: bold;
+    color: rgba($color: blue, $alpha: 0.5);
+    min-width: 8rem;
+  }
+  .icon {
+    min-width: 2.5rem;
+  }
+  .city {
+    color: rgba($color: blue, $alpha: 1);
+    text-align: center;
+  }
+  .content {
+    border: 1px solid rgba($color: blue, $alpha: 0.1);
+    border-radius: 0.5rem;
+    min-width: 30rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      padding: 0 2rem;
+      .temp {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span {
+          font-size: 3rem;
+        }
+        sup {
+          line-height: 1rem;
+        }
+
+        & > * {
+          display: inline-block;
+        }
+      }
+      .feels {
+        min-width: fit-content;
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }

@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MainLayout from "../../components/layouts/main-layout/MainLayout";
 import Search from "../../components/search/Search";
 import Weather from "../../components/weather/Weather";
-import useLocation from "../../shared/hooks/useLocation";
+import TemperatureContextProvider from "../../context/temperatureContext";
+import useWeather from "../../shared/hooks/useWeather";
 
 const HomePage: React.FC = () => {
-  const { city } = useLocation();
-  useEffect(() => {
-    console.log("changhed: ", city);
-  }, [city]);
+  const { weather } = useWeather();
   return (
-    <MainLayout>
-      <Search />
-      <Weather />
-    </MainLayout>
+    <TemperatureContextProvider>
+      <MainLayout>
+        <Search />
+        {weather && <Weather />}
+      </MainLayout>
+    </TemperatureContextProvider>
   );
 };
 

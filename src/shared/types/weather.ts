@@ -1,8 +1,8 @@
 export {};
 
 export interface Weather {
-  current?: ICurrentWeather;
-  daily?: DailyWeatherInfo[];
+  current: ICurrentWeather;
+  daily: DailyWeatherInfo[];
 }
 
 export interface ICurrentWeather {
@@ -13,17 +13,17 @@ export interface ICurrentWeather {
   pressure?: number;
   sunrise?: number;
   sunset?: number;
-  temp?: number;
+  temp: number;
   visibility?: number;
   wind_deg?: number;
   wind_speed?: number;
-  weather?: WeatherDescription[];
+  weather: WeatherDescription[];
 }
 
 export interface WeatherDescription {
   description?: string;
   icon?: string;
-  main?: string;
+  main: string;
 }
 
 export interface FeelsLikeInfo {
@@ -34,7 +34,7 @@ export interface FeelsLikeInfo {
 }
 
 export interface TempInfo {
-  day?: number;
+  day: number;
   eve?: number;
   max?: number;
   min?: number;
@@ -47,11 +47,11 @@ export interface DailyWeatherInfo {
   dt?: number;
   humidity?: number;
   pressure?: number;
-  sunrise?: number;
-  sunset?: number;
+  sunrise: number;
+  sunset: number;
   wind_deg?: number;
   wind_speed?: number;
   feels_like?: FeelsLikeInfo;
-  temp?: TempInfo;
-  weather?: WeatherDescription;
+  temp: TempInfo;
+  weather: WeatherDescription[];
 }

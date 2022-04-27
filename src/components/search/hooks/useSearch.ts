@@ -27,6 +27,7 @@ const useSearch = () => {
     }
     if (event.key === "Enter") {
       getCityInfo(input);
+      setInput("");
     }
   };
 
@@ -80,7 +81,7 @@ const useSearch = () => {
     setError("");
   };
 
-  return { handleSearchWeather, handleInputChange, error, setError, getCityInfo, city };
+  return { handleSearchWeather, handleInputChange, error, setError, getCityInfo, city, input };
 };
 
 export default useSearch;

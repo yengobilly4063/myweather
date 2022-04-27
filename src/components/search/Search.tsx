@@ -4,14 +4,15 @@ import styles from "./Search.module.scss";
 
 const Search = () => {
   const { isMobile } = useScreen();
-  const { handleSearchWeather, handleInputChange, error } = useSearch();
+  const { handleSearchWeather, handleInputChange, error, input } = useSearch();
   return (
     <div className={styles.wrapper}>
       <input
         className={`${isMobile && styles.mobile}`}
+        value={input}
         type="text"
         name="city"
-        placeholder="Search weather for city e.g. 'Tallinn'"
+        placeholder="City e.g. 'tallinn'"
         onChange={handleInputChange}
         onKeyPress={handleSearchWeather}
       />
