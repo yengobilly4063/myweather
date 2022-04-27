@@ -60,7 +60,7 @@ const useSearch = () => {
   const getGeolocationInfo = async () => {
     const { data } = await axios.get(_env.locationUrl);
     if (data) {
-      const { city, latitude: lat, longitude: lon } = data;
+      const { city } = data;
       getCityInfo(city);
     }
   };
