@@ -6,9 +6,13 @@ const useIcons = () => {
       case IconOptions.CLEAR:
         return "wi-day-sunny";
       case IconOptions.CLOUDS:
-        return "wi-cloudy";
+        return "wi-cloud";
       case IconOptions.RAIN:
-        return "wi-raindrops";
+        return "wi-sprinkle";
+      case IconOptions.SNOW:
+        return "wi-snow";
+      default:
+        return "wi-alien";
     }
   };
   return { getIconText };
